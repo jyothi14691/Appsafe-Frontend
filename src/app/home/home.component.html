@@ -1,0 +1,60 @@
+
+  <div class="container">
+    <div class="header">
+      <h3 style="text-align:center">Welcome to Visit Safe </h3>
+    </div>
+    <h4 style = "text-align: center"> This App provides you the customer traffic in the store </h4>
+
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-4" for="store"> Select a store and preferred location :</label>
+        <div class="col-sm-8">
+          <!-- <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
+              ng-click="toggled" ng-bind='selected'>
+              Select store
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-value="costco">COSTCO</a></li>
+              <li><a href="#">FOOD LION : NEW CASTLE DE 19720</a></li>
+              <li><a href="#">FOOD LION : NEWARK DE 19711</a></li>
+              <li><a href="#">FOOD LION : WILMINGTON DE 19802</a></li>
+              <li><a href="#">SHOPRITE : BRANDYWINE COMMONS || DE 19803</a></li>
+              <li><a href="#">SHOPRITE : NEWARK DE 19713</a></li>
+              <li><a href="#">SHOPRITE : BEAR DE 19701</a></li>
+              <li><a href="#">SHOPRITE : CHRISTIANA CROSSING 19801</a></li>
+              <li><a href="#">ACME : CONCORD PIKE DE 19803</a></li>
+              <li><a href="#">ACME : BEAR DE 19701 </a></li>
+              <li><a href="#">ACME : MIDDLETOWN DE 19709</a></li>
+              <li><a href="#">ACME : TROLLEY SQUARE 19806</a></li>
+            </ul>
+          </div> -->
+          <select [(ngModel)]="selectedOption" name="first">
+            <option *ngFor="let o of options">
+              {{o.name}}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-4" for="pwd">Enter the time in HH:MM format :</label>
+        <div class="col-sm-2">
+          <input type="hour" class="form-control" id="time" [(ngModel)]="time" placeholder="Hours:Minutes" name="time" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-2">
+          <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <label class="control-label col-sm-4" for="pwd">
+            Number of people in the store is : {{ numOfPeople }}</label>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
